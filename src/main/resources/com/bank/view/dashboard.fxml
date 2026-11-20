@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
@@ -11,53 +12,53 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox spacing="18.0" style="-fx-background-color: #f3f6fb; -fx-font-family: 'Segoe UI';" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bank.view.DashboardFxmlController">
+<VBox spacing="18.0" style="-fx-background-color: #f3f6fb; -fx-font-family: 'Segoe UI';" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bank.view.DashboardFxmlController">
    <padding><Insets bottom="26.0" left="34.0" right="34.0" top="24.0" /></padding>
    <children>
       <HBox alignment="CENTER_LEFT" spacing="12.0">
          <children>
             <VBox spacing="4.0" HBox.hgrow="ALWAYS">
                <children>
-                  <Label text="MORULA BANK" style="-fx-font-size: 11px; -fx-font-weight: bold; -fx-text-fill: #148b8b;" />
-                  <Label text="Customer accounts" style="-fx-font-size: 25px; -fx-font-weight: bold; -fx-text-fill: #14243b;" />
+                  <Label prefHeight="19.0" prefWidth="99.0" style="-fx-font-size: 15px; -fx-font-weight: bold; -fx-text-fill: #2391FF;" text="SKRILL BANK " />
+                  <Label style="-fx-font-size: 25px; -fx-font-weight: bold; -fx-text-fill: #14243b;" text="Customer Accounts" />
                </children>
             </VBox>
-            <Label text="Customer" style="-fx-text-fill: #68758a;" />
+            <Label style="-fx-text-fill: #68758a;" text="Customer" />
             <Label fx:id="customerLabel" style="-fx-font-weight: bold; -fx-text-fill: #14243b;" />
-            <Button text="Sign out" onAction="#handleLogout" style="-fx-background-color: #e9eef5; -fx-background-radius: 8; -fx-text-fill: #27364d;" />
+            <Button onAction="#handleLogout" style="-fx-background-color: #000000; -fx-background-radius: 8; -fx-text-fill: #FFFFFF;" text="Sign out" />
          </children>
       </HBox>
-      <TabPane VBox.vgrow="ALWAYS" tabClosingPolicy="UNAVAILABLE">
+      <TabPane tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
          <tabs>
             <Tab text="Accounts and transactions">
                <content>
                   <VBox spacing="14.0" style="-fx-background-color: white; -fx-background-radius: 10;">
                      <padding><Insets bottom="18.0" left="20.0" right="20.0" top="18.0" /></padding>
                      <children>
-                        <Label text="Select an account" style="-fx-font-weight: bold; -fx-text-fill: #35445b;" />
+                        <Label style="-fx-font-weight: bold; -fx-text-fill: #35445b;" text="Select an account" />
                         <ComboBox fx:id="accountCombo" prefWidth="520.0" promptText="Choose one of your accounts" />
                         <HBox alignment="CENTER_LEFT" spacing="14.0">
                            <children>
-                              <Label text="Current balance" style="-fx-text-fill: #68758a;" />
-                              <Label fx:id="balanceLabel" text="BWP --" style="-fx-font-size: 23px; -fx-font-weight: bold; -fx-text-fill: #14243b;" />
-                              <Button text="Refresh" onAction="#handleRefreshBalance" style="-fx-background-color: #e9eef5; -fx-background-radius: 7;" />
+                              <Label style="-fx-text-fill: #68758a;" text="Current balance" />
+                              <Label fx:id="balanceLabel" style="-fx-font-size: 23px; -fx-font-weight: bold; -fx-text-fill: #14243b;" text="BWP --" />
+                              <Button onAction="#handleRefreshBalance" style="-fx-background-color: #2391FF; -fx-background-radius: 7;" text="Refresh" />
                            </children>
                         </HBox>
-                        <Label text="Amount (BWP)" style="-fx-font-weight: bold; -fx-text-fill: #35445b;" />
-                        <TextField fx:id="amountField" promptText="0.00" maxWidth="280.0" />
+                        <Label style="-fx-font-weight: bold; -fx-text-fill: #35445b;" text="Amount (BWP)" />
+                        <TextField fx:id="amountField" maxWidth="280.0" promptText="0.00" />
                         <HBox spacing="10.0">
                            <children>
-                              <Button text="Deposit" onAction="#handleDeposit" prefWidth="140.0" prefHeight="38.0" style="-fx-background-color: #146f78; -fx-background-radius: 8; -fx-text-fill: white; -fx-font-weight: bold;" />
-                              <Button text="Withdraw" onAction="#handleWithdrawal" prefWidth="140.0" prefHeight="38.0" style="-fx-background-color: #14243b; -fx-background-radius: 8; -fx-text-fill: white; -fx-font-weight: bold;" />
+                              <Button onAction="#handleDeposit" prefHeight="38.0" prefWidth="140.0" style="-fx-background-color: #2391FF; -fx-background-radius: 8; -fx-text-fill: white; -fx-font-weight: bold;" text="Deposit" />
+                              <Button onAction="#handleWithdrawal" prefHeight="38.0" prefWidth="140.0" style="-fx-background-color: #000000; -fx-background-radius: 8; -fx-text-fill: white; -fx-font-weight: bold;" text="Withdraw" />
                            </children>
                         </HBox>
-                        <Label text="Transaction history" style="-fx-font-size: 15px; -fx-font-weight: bold; -fx-text-fill: #14243b;" />
+                        <Label style="-fx-font-size: 15px; -fx-font-weight: bold; -fx-text-fill: #14243b;" text="Transaction history" />
                         <TableView fx:id="historyTable" prefHeight="260.0" VBox.vgrow="ALWAYS">
                            <columns>
-                              <TableColumn fx:id="dateColumn" text="Date" prefWidth="180.0" />
-                              <TableColumn fx:id="typeColumn" text="Type" prefWidth="140.0" />
-                              <TableColumn fx:id="amountColumn" text="Amount" prefWidth="160.0" />
-                              <TableColumn fx:id="balanceAfterColumn" text="Balance after" prefWidth="180.0" />
+                              <TableColumn fx:id="dateColumn" prefWidth="180.0" text="Date" />
+                              <TableColumn fx:id="typeColumn" prefWidth="140.0" text="Type" />
+                              <TableColumn fx:id="amountColumn" prefWidth="160.0" text="Amount" />
+                              <TableColumn fx:id="balanceAfterColumn" prefWidth="180.0" text="Balance after" />
                            </columns>
                         </TableView>
                      </children>
@@ -66,25 +67,25 @@
             </Tab>
             <Tab text="Open an account">
                <content>
-                  <VBox spacing="12.0" maxWidth="540.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+                  <VBox maxWidth="540.0" spacing="12.0" style="-fx-background-color: white; -fx-background-radius: 10;">
                      <padding><Insets bottom="24.0" left="26.0" right="26.0" top="24.0" /></padding>
                      <children>
-                        <Label text="New account" style="-fx-font-size: 19px; -fx-font-weight: bold; -fx-text-fill: #14243b;" />
-                        <Label text="Account type" style="-fx-font-weight: bold; -fx-text-fill: #35445b;" />
+                        <Label style="-fx-font-size: 19px; -fx-font-weight: bold; -fx-text-fill: #14243b;" text="New account" />
+                        <Label style="-fx-font-weight: bold; -fx-text-fill: #35445b;" text="Account type" />
                         <ComboBox fx:id="accountTypeCombo" prefWidth="360.0" />
-                        <Label text="Branch" style="-fx-font-weight: bold; -fx-text-fill: #35445b;" />
-                        <TextField fx:id="branchField" text="Gaborone Main" promptText="Branch name" />
-                        <Label text="Opening balance (BWP)" style="-fx-font-weight: bold; -fx-text-fill: #35445b;" />
+                        <Label style="-fx-font-weight: bold; -fx-text-fill: #35445b;" text="Branch" />
+                        <TextField fx:id="branchField" promptText="Branch name" text="Gaborone Main" />
+                        <Label style="-fx-font-weight: bold; -fx-text-fill: #35445b;" text="Opening balance (BWP)" />
                         <TextField fx:id="openingBalanceField" promptText="0.00" />
                         <TextField fx:id="employmentDetailsField" promptText="Employer and work address" />
-                        <Label fx:id="investmentRuleLabel" wrapText="true" style="-fx-font-size: 12px; -fx-text-fill: #68758a;" />
-                        <Button text="Open account" onAction="#handleOpenAccount" prefWidth="190.0" prefHeight="40.0" style="-fx-background-color: #146f78; -fx-background-radius: 8; -fx-text-fill: white; -fx-font-weight: bold;" />
+                        <Label fx:id="investmentRuleLabel" style="-fx-font-size: 12px; -fx-text-fill: #68758a;" wrapText="true" />
+                        <Button onAction="#handleOpenAccount" prefHeight="40.0" prefWidth="190.0" style="-fx-background-color: #146f78; -fx-background-radius: 8; -fx-text-fill: white; -fx-font-weight: bold;" text="Open account" />
                      </children>
                   </VBox>
                </content>
             </Tab>
          </tabs>
       </TabPane>
-      <Label fx:id="resultLabel" text="Choose an account to view its balance and activity." minHeight="24.0" wrapText="true" style="-fx-font-size: 12px; -fx-text-fill: #68758a;" />
+      <Label fx:id="resultLabel" minHeight="24.0" style="-fx-font-size: 12px; -fx-text-fill: #68758a;" text="Choose an account to view its balance and activity." wrapText="true" />
    </children>
 </VBox>

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -7,24 +8,24 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" spacing="14.0" style="-fx-background-color: #f3f6fb; -fx-font-family: 'Segoe UI';" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bank.view.LoginFxmlController">
+<VBox alignment="CENTER" spacing="14.0" style="-fx-background-color: #f3f6fb; -fx-font-family: 'Segoe UI';" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bank.view.LoginFxmlController">
    <padding><Insets bottom="36.0" left="54.0" right="54.0" top="36.0" /></padding>
    <children>
-      <Label text="MORULA BANK" style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #148b8b;" />
-      <Label text="Welcome back" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #14243b;" />
-      <Label text="Sign in to view and manage your accounts." style="-fx-font-size: 13px; -fx-text-fill: #68758a;" />
+      <Label prefHeight="19.0" prefWidth="95.0" style="-fx-font-size: 15px; -fx-font-weight: bold; -fx-text-fill: #2391FF;" text="SKRILL BANK" />
+      <Label style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #14243b;" text="Welcome back" />
+      <Label style="-fx-font-size: 13px; -fx-text-fill: #68758a;" text="Sign in to view and manage your accounts." />
       <Separator />
-      <VBox spacing="8.0" maxWidth="360.0">
+      <VBox maxWidth="360.0" spacing="8.0">
          <children>
-            <Label text="Username" style="-fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: #35445b;" />
-            <TextField fx:id="usernameField" promptText="Enter your username" prefHeight="42.0" />
-            <Label text="Password" style="-fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: #35445b;" />
-            <PasswordField fx:id="passwordField" promptText="Enter your password" prefHeight="42.0" onAction="#handleLogin" />
-            <Button text="Sign in" onAction="#handleLogin" maxWidth="Infinity" prefHeight="44.0" style="-fx-background-color: #146f78; -fx-background-radius: 8; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold;" />
-            <Label fx:id="errorLabel" minHeight="32.0" wrapText="true" style="-fx-text-fill: #b42318; -fx-font-size: 12px;" />
-            <Button text="Create a customer profile" onAction="#handleOpenRegistration" maxWidth="Infinity" style="-fx-background-color: transparent; -fx-text-fill: #146f78; -fx-font-weight: bold;" />
+            <Label style="-fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: #000000;" text="Username" />
+            <TextField fx:id="usernameField" prefHeight="42.0" promptText="Enter your username" />
+            <Label style="-fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: #000000;" text="Password" />
+            <PasswordField fx:id="passwordField" onAction="#handleLogin" prefHeight="42.0" promptText="Enter your password" />
+            <Button maxWidth="Infinity" onAction="#handleLogin" prefHeight="44.0" style="-fx-background-color: #2391FF; -fx-background-radius: 8; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold;" text="Sign in" />
+            <Label fx:id="errorLabel" minHeight="32.0" style="-fx-text-fill: #b42318; -fx-font-size: 12px;" wrapText="true" />
+            <Button maxWidth="Infinity" onAction="#handleOpenRegistration" style="-fx-background-color: transparent; -fx-text-fill: #000000; -fx-font-weight: bold;" text="Create a customer profile" />
          </children>
       </VBox>
-      <Label text="Demo sign-in: user1 / pass1" style="-fx-font-size: 11px; -fx-text-fill: #8994a5;" />
+      <Label style="-fx-font-size: 11px; -fx-text-fill: #8994a5;" text="Demo sign-in: user1 / pass1" />
    </children>
 </VBox>

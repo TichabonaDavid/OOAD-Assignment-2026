@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <# : batch portion
 @REM ----------------------------------------------------------------------------
 @REM Licensed to the Apache Software Foundation (ASF) under one
@@ -378,4 +377,3 @@ try {
 }
 
 Write-Output "MVN_CMD=$MAVEN_HOME/bin/$MVN_CMD"
->>>>>>> 220fe29f91bfccbcde2cde4d80788c205cb129b5
