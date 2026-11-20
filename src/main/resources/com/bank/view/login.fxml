@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-=======
-
->>>>>>> 220fe29f91bfccbcde2cde4d80788c205cb129b5
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
-<<<<<<< HEAD
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
@@ -33,18 +28,3 @@
       <Label text="Demo sign-in: user1 / pass1" style="-fx-font-size: 11px; -fx-text-fill: #8994a5;" />
    </children>
 </VBox>
-=======
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.VBox?>
-
-<VBox alignment="CENTER" spacing="10.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bank.view.LoginFxmlController">
-   <padding>
-      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-   </padding>
-   <Label text="Bank Login" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
-   <TextField fx:id="usernameField" promptText="Username (e.g., user1)" />
-   <PasswordField fx:id="passwordField" promptText="Password (e.g., pass1)" />
-   <Button text="Login" onAction="#handleLogin" maxWidth="Infinity"/>
-   <Label fx:id="errorLabel" textFill="RED" />
-</VBox>
->>>>>>> 220fe29f91bfccbcde2cde4d80788c205cb129b5

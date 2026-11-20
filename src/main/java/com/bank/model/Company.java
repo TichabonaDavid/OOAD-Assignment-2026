@@ -1,7 +1,6 @@
 package com.bank.model;
 
 public class Company extends Customer {
-<<<<<<< HEAD
     private final String companyName;
     private final String companyRegNo;
 
@@ -18,14 +17,3 @@ public class Company extends Customer {
     public String getCompanyRegNo() { return companyRegNo; }
     @Override public String getFullName() { return companyName; }
 }
-=======
-    private String companyName, companyRegNo;
-    public Company(int id, String email, String address, String uname, String pwd, String cName, String regNo) {
-        super(id, email, address, uname, pwd);
-        this.companyName = cName; this.companyRegNo = regNo;
-    }
-    public String getCompanyName() { return companyName; }
-    public String getCompanyRegNo() { return companyRegNo; }
-    @Override public String getFullName() { return companyName; }
-}
->>>>>>> 220fe29f91bfccbcde2cde4d80788c205cb129b5
