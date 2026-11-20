@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Morula Bank
 
 JavaFX and H2 implementation of the OOAD banking assignment. The project is a separate deliverable copy and does not change the original project in Downloads.
@@ -34,3 +35,6 @@ Run the automated test suite with:
 - `view/` and `resources/com/bank/view/`: JavaFX boundary controllers and Scene Builder FXML files.
 
 For the class-to-code map, demo walkthrough, and assignment checklist, see the separate `Banking-System-Guide.md` deliverable.
+=======
+# OOAD-Assignment-2026
+>>>>>>> 220fe29f91bfccbcde2cde4d80788c205cb129b5

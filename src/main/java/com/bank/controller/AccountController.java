@@ -1,4 +1,5 @@
 package com.bank.controller;
+<<<<<<< HEAD
 
 import com.bank.dao.AccountDAO;
 import com.bank.model.AccountSummary;
@@ -49,3 +50,19 @@ public class AccountController {
                 .anyMatch(account -> account.accountNumber().equals(accountNumber));
     }
 }
+=======
+import com.bank.dao.AccountDAO;
+
+public class AccountController {
+    private AccountDAO accountDAO = new AccountDAO();
+    public double handleDeposit(String accountNumber, double amount) {
+        if (amount <= 0) return -1; 
+        double currentBalance = accountDAO.getBalance(accountNumber);
+        if (currentBalance < 0) return -1; 
+        double newBalance = currentBalance + amount;
+        accountDAO.updateBalance(accountNumber, newBalance);
+        accountDAO.recordTransaction(accountNumber, "DEPOSIT", amount);
+        return newBalance;
+    }
+}
+>>>>>>> 220fe29f91bfccbcde2cde4d80788c205cb129b5

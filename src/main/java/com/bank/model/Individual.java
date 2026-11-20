@@ -1,6 +1,7 @@
 package com.bank.model;
 
 public class Individual extends Customer {
+<<<<<<< HEAD
     private final String firstname;
     private final String surname;
 
@@ -17,3 +18,12 @@ public class Individual extends Customer {
     public String getSurname() { return surname; }
     @Override public String getFullName() { return firstname + " " + surname; }
 }
+=======
+    private String firstname, surname;
+    public Individual(int id, String email, String address, String uname, String pwd, String fname, String sname) {
+        super(id, email, address, uname, pwd);
+        this.firstname = fname; this.surname = sname;
+    }
+    @Override public String getFullName() { return firstname + " " + surname; }
+}
+>>>>>>> 220fe29f91bfccbcde2cde4d80788c205cb129b5

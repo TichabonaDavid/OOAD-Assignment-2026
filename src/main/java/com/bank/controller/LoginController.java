@@ -1,4 +1,5 @@
 package com.bank.controller;
+<<<<<<< HEAD
 
 import com.bank.dao.CustomerDAO;
 import com.bank.model.CustomerProfile;
@@ -40,3 +41,14 @@ public class LoginController {
 
     public CustomerProfile findCustomer(String username) { return customerDAO.findByUsername(username); }
 }
+=======
+import com.bank.dao.CustomerDAO;
+
+public class LoginController {
+    private CustomerDAO customerDAO = new CustomerDAO();
+    public boolean handleLogin(String username, String password) {
+        if (username == null || username.trim().isEmpty() || password == null || password.isEmpty()) return false;
+        return customerDAO.authenticate(username, password);
+    }
+}
+>>>>>>> 220fe29f91bfccbcde2cde4d80788c205cb129b5

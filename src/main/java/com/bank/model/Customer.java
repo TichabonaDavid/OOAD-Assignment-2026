@@ -1,5 +1,6 @@
 package com.bank.model;
 
+<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -26,11 +27,22 @@ public abstract class Customer {
         return value.trim();
     }
 
+=======
+public abstract class Customer {
+    private int customerID;
+    private String email, address, username, password;
+
+    public Customer(int customerID, String email, String address, String username, String password) {
+        this.customerID = customerID; this.email = email; this.address = address;
+        this.username = username; this.password = password;
+    }
+>>>>>>> 220fe29f91bfccbcde2cde4d80788c205cb129b5
     public int getCustomerID() { return customerID; }
     public String getEmail() { return email; }
     public String getAddress() { return address; }
     public String getUsername() { return username; }
     public String getPassword() { return password; }
+<<<<<<< HEAD
     public boolean login(String username, String password) {
         return this.username.equals(username) && this.password.equals(password);
     }
@@ -52,3 +64,7 @@ public abstract class Customer {
     public void openAccount(Account account) { addAccount(account); }
     public abstract String getFullName();
 }
+=======
+    public abstract String getFullName();
+}
+>>>>>>> 220fe29f91bfccbcde2cde4d80788c205cb129b5

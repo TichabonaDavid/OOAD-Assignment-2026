@@ -1,5 +1,6 @@
 package com.bank.model;
 
+<<<<<<< HEAD
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
@@ -26,3 +27,19 @@ public class InvestmentAccount extends Account implements Interest {
         balance -= amount;
     }
 }
+=======
+public class InvestmentAccount extends Account implements Interest {
+    private double monthlyRate = 0.05; // 5%
+    private final double MIN_DEPOSIT = 500.00;
+    public InvestmentAccount(String acc, String br, double bal) { super(acc, br, bal); }
+
+    @Override public void deposit(double amount) {
+        if (amount >= MIN_DEPOSIT) super.deposit(amount);
+        else System.out.println("ERROR: Minimum deposit is BWP 500.00");
+    }
+    @Override public double calculateInterest() { return balance * monthlyRate; }
+    @Override public void creditInterest() { balance += calculateInterest(); }
+    @Override public void payInterest() { creditInterest(); }
+    @Override public void withdraw(double amount) { if (amount > 0 && amount <= balance) balance -= amount; }
+}
+>>>>>>> 220fe29f91bfccbcde2cde4d80788c205cb129b5
