@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="9.0" style="-fx-background-color: #f3f6fb; -fx-font-family: 'Segoe UI';" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bank.view.RegisterFxmlController">
+   <padding><Insets bottom="24.0" left="40.0" right="40.0" top="22.0" /></padding>
+   <children>
+      <Label text="Create your customer profile" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #14243b;" />
+      <Label text="Register as an individual or company customer." wrapText="true" style="-fx-text-fill: #68758a;" />
+      <VBox spacing="6.0" maxWidth="420.0">
+         <children>
+            <Label text="Customer type" /><ComboBox fx:id="customerTypeCombo" maxWidth="Infinity" />
+            <Label fx:id="firstNameLabel" text="First name" /><TextField fx:id="firstNameField" promptText="First name" />
+            <Label fx:id="surnameLabel" text="Surname" /><TextField fx:id="surnameField" promptText="Surname" />
+            <Label fx:id="companyNameLabel" text="Company name" /><TextField fx:id="companyNameField" promptText="Registered company name" />
+            <Label fx:id="companyRegNoLabel" text="Company registration number" /><TextField fx:id="companyRegNoField" promptText="Registration number" />
+            <Label text="Email" /><TextField fx:id="emailField" promptText="name@example.com" />
+            <Label text="Address" /><TextField fx:id="addressField" promptText="Town or street address" />
+            <Label text="Username" /><TextField fx:id="usernameField" promptText="Choose a username" />
+            <Label text="Password (at least 8 characters)" /><PasswordField fx:id="passwordField" promptText="Create a password" />
+            <Label text="Confirm password" /><PasswordField fx:id="confirmPasswordField" promptText="Enter the password again" />
+            <Label fx:id="resultLabel" minHeight="30.0" wrapText="true" />
+            <Button text="Create profile" onAction="#handleRegister" maxWidth="Infinity" prefHeight="40.0" style="-fx-background-color: #146f78; -fx-background-radius: 8; -fx-text-fill: white; -fx-font-weight: bold;" />
+            <Button text="Close" onAction="#handleClose" maxWidth="Infinity" style="-fx-background-color: transparent; -fx-text-fill: #68758a;" />
+         </children>
+      </VBox>
+   </children>
+</VBox>
